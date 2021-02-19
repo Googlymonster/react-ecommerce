@@ -13,7 +13,6 @@ const App = () => {
 
     const fetchProducts = async () => {
         const { data } = await commerce.products.list();
-
         setProducts(data);
     };
   
@@ -27,8 +26,8 @@ const App = () => {
     };
 
     const handleUpdateCartQty = async (productId, quantity) => {
-        const {cart} = await commerce.cart.update(productId, {quantity})
-        setCart(cart)
+        const {cart} = await commerce.cart.update(productId, {quantity});
+        setCart(cart);
     };
 
     const handleRemoveFromCart = async (productId) => {
@@ -90,7 +89,6 @@ const App = () => {
                     </Route>
                 </Switch>
             </div>
-
         </Router>
     );
 };
